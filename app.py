@@ -5,7 +5,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 
 # Load API key from environment variable
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets["general"]["OPENAI_API_KEY"]
 
 if not OPENAI_API_KEY:
     st.error("OpenAI API key is missing. Please set the OPENAI_API_KEY environment variable.")
